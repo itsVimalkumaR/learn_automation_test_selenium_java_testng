@@ -82,6 +82,8 @@ public class handlingCheckBox {
 	
 	public static void navigateToAdmin() {
 		driver.findElement(By.xpath("//a[@href='/web/index.php/admin/viewAdminModule']")).click();
+		System.out.println("Successfully navigated to Admin page");
+		Thread.sleep(2000);
 	}
 	
 	public static WebElement validateCheckboxStatus() throws Exception{
