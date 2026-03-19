@@ -3,9 +3,7 @@ package automation_test_selenium_java_testng;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class handlingCheckBox {
 
@@ -80,7 +78,7 @@ public class handlingCheckBox {
 		System.out.println("Successfully logged in...");
 	}
 	
-	public static void navigateToAdmin() {
+	public static void navigateToAdmin() throws Exception{
 		driver.findElement(By.xpath("//a[@href='/web/index.php/admin/viewAdminModule']")).click();
 		System.out.println("Successfully navigated to Admin page");
 		Thread.sleep(2000);

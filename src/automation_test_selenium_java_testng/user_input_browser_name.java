@@ -9,14 +9,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class user_input_browser_name {
 	
+	static WebDriver driver = null;
+	static Scanner sc = new Scanner(System.in);
+
 	public static void main(String[] args) {
-		
-		Scanner sc = new Scanner(System.in);
-		
+
 		System.out.println("Enter Browser Name");
-		String browser_name = sc.nextLine();
-		
-		WebDriver driver = null;
+		String browser_name = sc.nextLine();		
 		
 		if (browser_name.equals("Chrome")) {
 			driver = new ChromeDriver();

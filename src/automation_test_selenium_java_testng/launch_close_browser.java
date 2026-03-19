@@ -1,6 +1,5 @@
 package automation_test_selenium_java_testng;
 
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 // Write a script to open the browser, enter the google.com, and close browser?

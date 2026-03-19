@@ -1,6 +1,5 @@
 package automation_test_selenium_java_testng;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class navigate_cmds {
