@@ -8,5 +8,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="jar-files/selenium-server-4.40.0.jar"/>
 	<classpathentry kind="lib" path="jar-files/webdrivermanager-6.3.3.jar"/>
+	<classpathentry kind="lib" path="jar-files/commons-io-2.21.0.jar"/>
+	<classpathentry kind="lib" path="jar-files/testng-7.12.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

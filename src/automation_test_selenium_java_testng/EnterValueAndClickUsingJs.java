@@ -11,32 +11,35 @@ public class EnterValueAndClickUsingJs {
 		EdgeDriver driver = new EdgeDriver();
 		driver.get("https://adactinhotelapp.com/HotelAppBuild2/Register.php");
 		driver.manage().window().maximize();
-		
-		JavascriptExecutor js = driver;
-		
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
 		String username = "AutomationTester";
-		
-		js.executeScript("document.getElementById('username').setAttribute('value', '"+ username +"')");
-		
+
+		js.executeScript("document.getElementById('username').setAttribute('value', arguments[0])", username);
+
 		Object enteredValue = js.executeScript("return document.getElementById('username').getAttribute('value')");
-		
-		if (enteredValue.equals("AutomationTester")) {
+
+		if ("AutomationTester".equals(enteredValue)) {
 			System.out.println(enteredValue);
 		} else {
 			System.out.println("Not Matched");
 		}
-		
-		js.executeScript("return document.getElementById('Submit').click()");
-		
+
+		js.executeScript("document.getElementById('Submit').click()");
+
 		WebElement reset_btn = driver.findElement(By.id("Reset"));
 		reset_btn.click();
-//		js.executeScript("arguments[0].click()", reset_btn);
-		
+//        js.executeScript("arguments[0].click()", reset_btn);
+
 		Object resetedValue = js.executeScript("return document.getElementById('username').getAttribute('value')");
-		if (resetedValue.equals("")) {
+
+		if ("".equals(resetedValue)) {
 			System.out.println("Should cleared");
 		} else {
 			System.out.println("Not cleared");
 		}
+
+		driver.quit();
 	}
 }
